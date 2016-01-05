@@ -46,6 +46,7 @@ The purpose of this exercise is to look at brushes and how they can be used to s
             </LinearGradientBrush>
         </Border.Background>
     </Border>
+    
 
  6. The border control is a ContentControl and can only have item as content. To give it more flexibility,
     we are going add a Grid into it and move the background into the Grid instead:
@@ -61,12 +62,14 @@ The purpose of this exercise is to look at brushes and how they can be used to s
             </Grid.Background>
         </Grid>
     </Border>
+    
 
 7. Within the Grid we want to have some text. Add a TextBlock and position it in the center both 
    horizontally and vertically:
    
    
     <TextBlock Text="Application Header" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    
     
 8. On the TextBlock we can change the font characteristics
 
@@ -76,6 +79,7 @@ The purpose of this exercise is to look at brushes and how they can be used to s
                 FontSize="24"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"/>
+
 
 
 ## Encapsulate
@@ -100,4 +104,5 @@ In Xaml we have the concept of UserControl that is a building block for doing ju
 
     This will include the application header user control inside row 0 of the grid.
     
+  
   
