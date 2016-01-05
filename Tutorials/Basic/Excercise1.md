@@ -10,6 +10,7 @@ different layout possibilities.
 2. Add a button within the Grid tag
 
     ...
+    
     <Button Width="100" Height="50">
         <Button.Content>
             Click me
@@ -17,6 +18,7 @@ different layout possibilities.
     </Button>
 
     Note that the Button.Content tag is not really needed. Content is the default property for a ContentControl. 
+    
     ...
 
 
