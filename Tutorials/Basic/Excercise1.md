@@ -9,7 +9,6 @@ different layout possibilities.
 1. Open MainPage.xaml
 2. Add a button within the Grid tag
 
-
         <Button Width="100" Height="50">
             <Button.Content>
                 Click me
@@ -17,64 +16,55 @@ different layout possibilities.
         </Button>
 
     Note that the Button.Content tag is not really needed. Content is the default property for a ContentControl. 
-    
 
 3. In order for us to be able to respond to the button being clicked, we need to hook up an event.
    On the button object there is a property called Click. Lets add it to the tag, making it look like the following:
    
-
-    <Button Width="100" Height="50" Click="Button_Click">
-        <Button.Content>
-            Click me
-        </Button.Content>
-    </Button>
+        <Button Width="100" Height="50" Click="Button_Click">
+            <Button.Content>
+                Click me
+            </Button.Content>
+        </Button>
    
 4. Open the MainPage.xaml.cs by right-clicking the MainPage.xaml in the solution explorer select "View Code"
 
 5. Add the event handler; Button_Click() method inside the class:
 
-    
-    private async void Button_Click(object sender, RoutedEventArgs e)
-    {
-        var dialog = new MessageDialog("Hello world");
-        await dialog.ShowAsync();
-    }
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new MessageDialog("Hello world");
+            await dialog.ShowAsync();
+        }
     
 6. Add the following using statement at the top:
 
-
-    using Windows.UI.Popups;
-        
+        using Windows.UI.Popups;
 
     Running your solution should now have a message dialog popping up when clicking it.
        
 6. Add a TextBox tag before the Button
 
-
-    <TextBox Width="100" Height="30"/>
+        <TextBox Width="100" Height="30"/>
     
 7. Add margin to the button to push the button down (Xaml is not by default using a flow layout)
 
-
-    <Button Width="100" Height="50" Click="Button_Click" Margin="0,70,0,0">
-        <Button.Content>
-            Click me
-        </Button.Content>
-    </Button>
+        <Button Width="100" Height="50" Click="Button_Click" Margin="0,70,0,0">
+            <Button.Content>
+                Click me
+            </Button.Content>
+        </Button>
     
 8. Give the TextBox a name, so it becomes available in the "code-behind"
-
-
-    <TextBox x:Name="textBox" Width="100" Height="30"/>
+ 
+        <TextBox x:Name="textBox" Width="100" Height="30"/>
 
 9. Change the event handler to take the input from the textbox into the message being shown:
 
-
-    private async void Button_Click(object sender, RoutedEventArgs e)
-    {
-        var dialog = new MessageDialog($"hello world : {textBox.Text}");
-        await dialog.ShowAsync();
-    }
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new MessageDialog($"hello world : {textBox.Text}");
+            await dialog.ShowAsync();
+        }
 
 
 ### Canvas
