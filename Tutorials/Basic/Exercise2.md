@@ -7,6 +7,7 @@ The purpose of this exercise is to look at brushes and how they can be used to s
 1. Open MainPage.xaml
 2. Lets add another row at the top of grid we created in exercise 1 - make it 70 pixels high
 
+
     <Grid.RowDefinitions>
         <RowDefinition Height="70"/>
         <RowDefinition Height="40"/>
