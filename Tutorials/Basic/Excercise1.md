@@ -9,18 +9,15 @@ different layout possibilities.
 1. Open MainPage.xaml
 2. Add a button within the Grid tag
 
-    ...
-    
-    <Button Width="100" Height="50">
-        <Button.Content>
-            Click me
-        </Button.Content>
-    </Button>
+
+        <Button Width="100" Height="50">
+            <Button.Content>
+                Click me
+            </Button.Content>
+        </Button>
 
     Note that the Button.Content tag is not really needed. Content is the default property for a ContentControl. 
     
-    ...
-
 
 3. In order for us to be able to respond to the button being clicked, we need to hook up an event.
    On the button object there is a property called Click. Lets add it to the tag, making it look like the following:
