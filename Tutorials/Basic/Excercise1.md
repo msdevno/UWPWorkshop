@@ -86,7 +86,7 @@ the Canvas.Top attached dependency property instead:
     <Canvas>
 
         <TextBox x:Name="textBox" Width="100" Height="30"/>
-        <Button Width="100" Height="100" Click="Button_Click" Canvas.Top="30">
+        <Button Width="100" Height="30" Click="Button_Click" Canvas.Top="30">
             <Button.Content>
                 Click me
             </Button.Content>
@@ -104,7 +104,7 @@ button.
     <StackPanel Orientation="Vertical">
 
         <TextBox x:Name="textBox" Width="100" Height="30"/>
-        <Button Width="100" Height="100" Click="Button_Click">
+        <Button Width="100" Height="30" Click="Button_Click">
             <Button.Content>
                 Click me
             </Button.Content>
@@ -130,7 +130,7 @@ property to the children:
         </Grid.RowDefinitions>
 
         <TextBox x:Name="textBox" Width="100" Height="30" Grid.Row="0"/>
-        <Button Width="100" Height="100" Click="Button_Click" Grid.Row="1">
+        <Button Width="100" Height="30" Click="Button_Click" Grid.Row="1">
             <Button.Content>
                 Click me
             </Button.Content>
