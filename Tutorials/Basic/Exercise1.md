@@ -28,7 +28,13 @@ different layout possibilities.
    
 4. Open the MainPage.xaml.cs by right-clicking the MainPage.xaml in the solution explorer select "View Code"
 
-5. Add the event handler; Button_Click() method inside the class:
+5. Add the following using statement at the top:
+
+        using Windows.UI.Popups;
+
+    Running your solution should now have a message dialog popping up when clicking it.
+
+6. Add the event handler; Button_Click() method inside the class:
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -36,17 +42,12 @@ different layout possibilities.
             await dialog.ShowAsync();
         }
     
-6. Add the following using statement at the top:
-
-        using Windows.UI.Popups;
-
-    Running your solution should now have a message dialog popping up when clicking it.
        
-6. Add a TextBox tag before the Button
+7. Add a TextBox tag before the Button
 
         <TextBox Width="100" Height="30"/>
     
-7. Add margin to the button to push the button down (Xaml is not by default using a flow layout)
+8. Add margin to the button to push the button down (Xaml is not by default using a flow layout)
 
         <Button Width="100" Height="50" Click="Button_Click" Margin="0,70,0,0">
             <Button.Content>
@@ -54,11 +55,11 @@ different layout possibilities.
             </Button.Content>
         </Button>
     
-8. Give the TextBox a name, so it becomes available in the "code-behind"
+9. Give the TextBox a name, so it becomes available in the "code-behind"
  
         <TextBox x:Name="textBox" Width="100" Height="30"/>
 
-9. Change the event handler to take the input from the textbox into the message being shown:
+10. Change the event handler to take the input from the textbox into the message being shown:
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
