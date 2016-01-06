@@ -78,8 +78,7 @@ have as target. Lets build one that implicitly targets all buttons on the page.
     on the target type.
     
     
- 3. Move the ControlTemplate into the Setter.Value element:
- 
+3. Move the ControlTemplate into the Setter.Value element:
  
         <Style TargetType="Button">
             <Style.Setters>
