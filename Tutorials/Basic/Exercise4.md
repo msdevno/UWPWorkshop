@@ -77,6 +77,7 @@ have as target. Lets build one that implicitly targets all buttons on the page.
     The style targets the button and defines property setters. These setters can set any of the properties
     on the target type.
     
+    
  3. Move the ControlTemplate into the Setter.Value element:
  
  
